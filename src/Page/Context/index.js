@@ -1,4 +1,4 @@
-import React, { Component, createContext } from "react";
+import React, { Component, Fragment, createContext } from "react";
 import { Button } from "antd";
 import OutsideAnime from "./OutsideAnime";
 import { AnimeContext, animeList } from "./context";
@@ -33,7 +33,7 @@ class Context extends Component {
   };
   render() {
     return (
-      <div className="context">
+      <Fragment>
         <h2>Context</h2>
         <h3>同文件传参</h3>
         <Button onClick={this.change}>小英雄</Button>
@@ -44,7 +44,7 @@ class Context extends Component {
         <AnimeContext.Provider value={this.state.outContext}>
           <OutsideAnime />
         </AnimeContext.Provider>
-      </div>
+      </Fragment>
     );
   }
 }

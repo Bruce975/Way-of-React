@@ -1,11 +1,11 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import ErrorBoundaries from "../../component/ErrorBoundaries";
 import { Button } from "antd";
 
 class Error extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <h5>正确的代码</h5>
         <ErrorBoundaries>
           <div>老铁666啊</div>
@@ -14,7 +14,7 @@ class Error extends Component {
         <ErrorBoundaries>
           <ErrorChildren />
         </ErrorBoundaries>
-      </div>
+      </Fragment>
     );
   }
 }

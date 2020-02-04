@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { Button } from "antd";
 import { AnimeContextConsumer } from "../index";
 
@@ -8,11 +8,11 @@ class OutsideAnime extends Component {
     return (
       <AnimeContextConsumer>
         {({ anime, toggle }) => (
-          <div>
+          <Fragment>
             <Button onClick={toggle}>Toogle</Button>
             <p>{anime.name}</p>
             <p>{anime.country}</p>
-          </div>
+          </Fragment>
         )}
       </AnimeContextConsumer>
     );
