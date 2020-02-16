@@ -5,6 +5,7 @@ import Context from "./Page/Context";
 import Error from "./Page/Error";
 import Ref from "./Page/Ref";
 import Hook from "./Page/Hook";
+import MobX from "./Page/MobX";
 
 const { Sider } = Layout;
 
@@ -28,6 +29,9 @@ class App extends Component {
               <Menu.Item key="4">
                 <Link to="/hook">Hook</Link>
               </Menu.Item>
+              <Menu.Item key="5">
+                <Link to="/mobx">MobX</Link>
+              </Menu.Item>
             </Menu>
           </Sider>
           <div className="page-content">
@@ -35,6 +39,7 @@ class App extends Component {
             <Route path="/error" exact component={Error} />
             <Route path="/ref" exact component={Ref} />
             <Route path="/hook" exact component={Hook} />
+            <Route path="/mobx" exact component={MobX} />
           </div>
         </BrowserRouter>
       </Layout>
